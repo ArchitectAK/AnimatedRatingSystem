@@ -14,10 +14,7 @@ import android.widget.LinearLayout
  */
 class FreeAnimatedRatingBar @kotlin.jvm.JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : LinearLayout(context, attrs, defStyleAttr), OnRatingChangedListener {
-    override fun onRatingChanged(ratingBar: FreeAnimatedRatingBar, rating: Float) {
-
-    }
+) : LinearLayout(context, attrs, defStyleAttr), IAnimatedRatingBar {
 
     private var listener: OnRatingChangedListener? = null
     private var duration = 500
@@ -115,7 +112,7 @@ class FreeAnimatedRatingBar @kotlin.jvm.JvmOverloads constructor(
         isNeedRedraw = false
     }
 
-    fun setProgressImageResource(resourceId: Int) {
+    override fun setProgressImageResource(resourceId: Int) {
         if (resourceId == 0) {
             return
         }
@@ -124,13 +121,13 @@ class FreeAnimatedRatingBar @kotlin.jvm.JvmOverloads constructor(
         setProgressImageDrawable(drawable)
     }
 
-    fun setProgressImageDrawable(drawable: Drawable) {
+    override fun setProgressImageDrawable(drawable: Drawable) {
         this.progressImage = drawable
         isNeedRedraw = true
         postInvalidate()
     }
 
-    fun setSecondaryProgressImageResource(resourceId: Int) {
+    override fun setSecondaryProgressImageResource(resourceId: Int) {
         if (resourceId == 0) {
             return
         }
@@ -139,13 +136,13 @@ class FreeAnimatedRatingBar @kotlin.jvm.JvmOverloads constructor(
         setSecondaryProgressImageDrawable(drawable)
     }
 
-    fun setSecondaryProgressImageDrawable(drawable: Drawable) {
+    override fun setSecondaryProgressImageDrawable(drawable: Drawable) {
         this.secondaryProgressImage = drawable
         isNeedRedraw = true
         postInvalidate()
     }
 
-    fun setNumStars(stars: Int) {
+    override fun setNumStars(stars: Int) {
         if (this.numStars == stars) {
             return
         }
@@ -155,7 +152,7 @@ class FreeAnimatedRatingBar @kotlin.jvm.JvmOverloads constructor(
         postInvalidate()
     }
 
-    fun setRating(rating: Float) {
+    override fun setRating(rating: Float) {
         var rating = rating
         if (this.rating == rating) {
             return
@@ -170,7 +167,7 @@ class FreeAnimatedRatingBar @kotlin.jvm.JvmOverloads constructor(
         postInvalidate()
     }
 
-    fun setStarGap(gapSize: Int) {
+    override fun setStarGap(gapSize: Int) {
         if (this.gapSize == gapSize) {
             return
         }
@@ -181,22 +178,22 @@ class FreeAnimatedRatingBar @kotlin.jvm.JvmOverloads constructor(
     }
 
 
-    fun setOnRatingChangedListener(listener: OnRatingChangedListener) {
+    override fun setOnRatingChangedListener(listener: OnRatingChangedListener) {
         this.listener = listener
     }
 
 
-    fun setSeekable(seekable: Boolean) {
+    override fun setSeekable(seekable: Boolean) {
         this.seekable = seekable
     }
 
 
-    fun setAnimateDuration(duration: Int) {
+    override fun setAnimateDuration(duration: Int) {
         this.duration = duration
     }
 
 
-    fun startAnimate() {
+    override fun startAnimate() {
         var delay = 0
         for (item in items!!) {
             postDelayed({
