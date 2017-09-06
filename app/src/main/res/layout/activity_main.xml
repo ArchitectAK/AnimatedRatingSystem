@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+
+    <com.freeankit.animated_rating_system.FreeAnimatedRatingBar
+        android:id="@+id/arb"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        app:gapSize="10dp"
+        app:max="5"
+        app:numStars="5"
+        app:progressImage="@drawable/icon_progress"
+        app:rating="4.3"
+        app:secondaryProgressImage="@drawable/icon_secondary" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="animate" />
+</RelativeLayout>
