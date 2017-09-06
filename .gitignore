@@ -9,3 +9,5 @@
 .externalNativeBuild
 /.idea/
 !/.idea/
+animated_rating_system/libs/
+app/libs/
