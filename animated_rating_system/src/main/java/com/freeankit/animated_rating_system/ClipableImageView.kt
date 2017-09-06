@@ -34,7 +34,7 @@ class ClipableImageView @JvmOverloads constructor(
 
     private var level: Float = 0.toFloat()
 
-    fun init() {
+    init {
         setWillNotDraw(false)
         initializeBitmap()
     }
