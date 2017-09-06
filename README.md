@@ -11,7 +11,7 @@ Use maven repo and add it to project level build.gradle inside dependencies
 
 Add dependency to app level build.gradle 
 
-    compile 'com.freeankit.animated_rating_system:animated_rating_system:1.0.0'
+    compile 'com.freeankit.animated_rating_system:animated_rating_system:1.0.3'
 
 And use free animated rating bar as below 
 
