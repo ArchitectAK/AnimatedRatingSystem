@@ -65,8 +65,8 @@ generateJavadocsJar.dependsOn generateJavadocs
 artifacts {
     archives generateSourcesJar
 }
-def siteUrl = 'https://androidhumanrobot.blogspot.com'
-def gitUrl = 'https://androidhumanrobot.blogspot.com'
+def siteUrl = 'https://github.com/AnkitDroidGit/AnimatedRatingSystem'
+def gitUrl = 'https://github.com/AnkitDroidGit/AnimatedRatingSystem'
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 bintray {
