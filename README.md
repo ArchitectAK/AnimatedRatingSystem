@@ -1,5 +1,8 @@
 # AnimatedRatingSystem
 
+
+![GIF](https://github.com/AnkitDroidGit/AnimatedRatingSystem/blob/master/app/art/gif.gif)
+
 Use maven repo and add it to project level build.gradle inside dependencies
  
     maven {
