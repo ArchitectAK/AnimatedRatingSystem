@@ -3,7 +3,7 @@
 
 # Used in live app
 [Download App](https://play.google.com/store/apps/details?id=com.freeankit.ankitprofile) and Traverse through
-- Hamburger -> Projects -> Select any project -> Tap on Project Image.
+- Hamburger -> Skills -> Select any skill -> Tap on any recylerviewitem.
 
 ## A demo is shown here
 
